@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+
+    <!-- Styling CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/stylesheet.css">
+
+    <!--Tab Icon-->
+    <link rel="icon" href="https://static.thenounproject.com/png/967229-200.png">
+
+    <!--Tab Title-->
+    <title>Marine's Weather Predictions</title>
+
+
+</head>
+
+<body>
+
+    <!--Title-->
+    <div class="jumbotron container-fluid">
+        <h1> <strong>Marine's Weather Dashboard</strong></h1>
+    </div>
+
+    <div class="container">
+        <!--City Searching-->
+        <div class="row">
+            <div class="col-sm-6">
+                <!--Search Question-->
+                <p>Where Are We Going?</p>
+                <div class="input-group">
+                    <!--Search Input-->
+                    <input type="text" class="form-control" id="searchCity">
+                        <!--Search Button-->
+                        <button class="btn" id="searchBtn"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+
+            <!--History-->
+            <div class="col-sm-6">
+                <!--History Title-->
+                <p>Last Searches:</p>
+                <!--History List-->
+                <ul class="list-group">   
+                </ul>
+                <!--Clear Button-->
+                <button class="btn" type="button" id="clearBtn">Clear history</button>
+            </div>
+            </div> 
+            <!--Current Weather Info-->
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12" id="weatherCurrent">
+                        <!--City-->
+                        <h2 class="namedCity" id="cityCurrent"></h2>
+                        <!--Current Temp-->
+                        <p class="current">Temperature: <span class="current" id="tempCurrent"></span></p>
+                        <!--Current Humidity-->
+                        <p class="current">Humidity: <span class="current" id="humidityCurrent"></span></p> 
+                        <!--Current Wind Speed-->
+                        <p class="current">Wind Speed: <span class="current" id="windSpeed"></span></p>
+                        <!--Current UV Index-->
+                        <p class="current">UV index: <span class="current" id="uvIndex"></span></p> 
+                    </div>
+                </div>
+                <!--Forecast Info, Could do more (30 days, for example) if we pay for a subscription, but free version only offers 5 day forecast-->
+                <div class="col-sm-12" id ="futureWeather">
+                    <!--Forecast title-->
+                    <h2 class="Forecast">Forecast: </h2>
+                    <div class="row" id="foreInfo">
+                        <!--Day 1-->
+                        <div class="col-sm-2" >
+                            <p id="dateFuture0"></p>
+                            <p id="iconFuture0"></p>
+                            <p>Temp: <span id="temperaturreFuture0"></span></p>
+                            <p>Humidity: <span id="humidityFuture0"></span></p>
+                        </div>
+                        <!--Day 2-->
+                        <div class="col-sm-2" >
+                            <p id="dateFuture1"></p>
+                            <p id="iconFuture1"></p>
+                            <p>Temp: <span id="temperaturreFuture1"></span></p>
+                            <p>Humidity: <span id="humidityFuture1"></span></p>
+                        </div>
+                        <!--Day 3-->
+                        <div class="col-sm-2">
+                            <p id="dateFuture2"></p>
+                            <p id="iconFuture2"></p>
+                            <p>Temp: <span id="temperaturreFuture2"></span></p>
+                            <p>Humidity: <span id="humidityFuture2"></span></p>
+                        </div>
+                        <!--Day 4-->
+                        <div class="col-sm-2">
+                            <p id="dateFuture3"></p>
+                            <p id="iconFuture3"></p>
+                            <p>Temp: <span id="temperaturreFuture3"></span></p>
+                            <p>Humidity: <span id="humidityFuture3"></span></p>
+                        </div>
+                        <!--Day 5-->
+                        <div class="col-sm-2" >
+                            <p id="dateFuture4"></p>
+                            <p id="iconFuture4"></p>
+                            <p>Temp: <span id="temperaturreFuture4"></span></p>
+                            <p>Humidity: <span id="humidityFuture4"></span></p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <!-- Boostrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script JS -->
+  <script src="assets/js/script.js"></script>
+  
+</body>
+</html>
